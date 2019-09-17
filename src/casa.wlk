@@ -9,11 +9,11 @@ object casaDePepeYJulian {
 	
 	method tieneComida(){return cosas.any({comida => comida.esComida()})}
 	
-	method vieneDeEquiparse(){ }
+	method vieneDeEquiparse(){return cosas.last().esElectrodomestico() or cosas.last().precio() >5000}
 	
-	method esDerrochona(){
-		
-	}
+	method esDerrochona(){return cosas.sum(
+	
+	
 	method compraMasCara(){
 		
 	}
