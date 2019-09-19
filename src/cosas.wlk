@@ -60,9 +60,32 @@ object dolar{
 	method cotizacion(){return 56 }
 }
 object packDeComida{
-	method precio(plato, aderezo){ return plato.precio() + aderezo.precio()}
+	var plato = []
+	var aderezo = []
+	method precio(){return plato.precio() + aderezo.precio()}
+	method esComida(){return true}
+	method esElectrodomestico(){return false}
 	
+	}
+
+object packRegalos{
+	var componentes = []
+	
+	method precio(){
+		return componentes.sum({ cosa => cosa.precio() }) * 0.8
+		}
+	method esComida(){
+		return componentes.all({cosa => cosa.precio() })
+	}
+	method esElectrodomestico(){
+		return componentes.any({cosa => cosa.precio() })
+	}	
 }
+
+
+
+
+
 
 
 
