@@ -70,7 +70,7 @@ object packDeComida{
 
 object packRegalos{
 	var componentes = []
-	
+	method poner(comp){componentes.add(comp)}
 	method precio(){
 		return componentes.sum({ cosa => cosa.precio() }) * 0.8
 		}
